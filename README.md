@@ -5,7 +5,6 @@ This is a nextJS template.
 - Everything is made on top of standard nextJS template (`npx create-next-app@latest . `)
 - strict dependencies are used to make dependencies more manageable
 - look for 'template' in the code to find places to change
-- test
 
 
 
