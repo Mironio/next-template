@@ -9,6 +9,7 @@ This is a Next.js template.
 - Configured husky pre-push. See .husky/pre-push to tweak it
 - added example how to extend colors
 - added `models` folder with interface example
+- Added Tailwind Material and Heroicons
 
 ### Build
 
