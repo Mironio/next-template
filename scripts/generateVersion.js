@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 
 // Execute the git command to get the commit hash
-exec('git rev-parse HEAD', (error, stdout, stderr) => {
+exec('git rev-parse HEAD', (error, stdout) => {
   if (error) {
     console.error('Error getting commit hash:', error);
     return;
