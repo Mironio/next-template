@@ -1,15 +1,21 @@
 This is a nextJS template. 
 
-## Features
+# Features
 
-- Everything is made on top of standard nextJS template (`npx create-next-app@latest . `)
+- Everything is made on top of standard nextJS template (`npx create-next-app@latest . `) 
+- look for 'SELECT' in the code to find places to change
+
+### Build
+
 - strict dependencies are used to make dependencies more manageable
 - [standalone](https://tech.competa.com/standalone-deployment-of-nextjs-3286490cb39b) build is used.
 - `devDependencies` moved to `dependencies` in `package.json`. They don't affect the build size/time due to standalone mode
-- Dockerfile was taken from official [examples](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile) 
-- look for 'SELECT' in the code to find places to change
+- Dockerfile was taken from official [examples](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile)
 
+### Eslint
 
+- default nextJS Eslint configuration is used
+- added [tailwind eslint plugin](https://www.npmjs.com/package/eslint-plugin-tailwindcss)
 
 
 ## Getting Started
