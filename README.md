@@ -6,7 +6,7 @@ This is a nextJS template.
 - look for 'SELECT' in the code to find places to change
 - Added `npm run generate-version` that populates version.ts with commit hash. This script can be used before deploy 
 - Added api/health endpoint that emits 200 along with the version
-- 
+- Configured husky pre-push. See .husky/pre-push to tweak it
 
 ### Build
 
