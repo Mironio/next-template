@@ -7,14 +7,12 @@ This is a nextJS template.
 - [standalone](https://tech.competa.com/standalone-deployment-of-nextjs-3286490cb39b) build is used.
 - `devDependencies` moved to `dependencies` in `package.json`. They don't affect the build size/time due to standalone mode
 - Dockerfile was taken from official [examples](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile) 
-- look for 'template' in the code to find places to change
+- look for 'SELECT' in the code to find places to change
 
 
 
 
 ## Getting Started
-
-First, run the development server:
 
 ```bash
 npm run dev
@@ -40,9 +38,7 @@ bun dev
 
 ### How to run container with podman.
 
-- The steps below can be easily done by docker
-
-
+- The steps below can be easily done by docker as well
 
 ```bash
 # Install
