@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* colors example don't forget to update tailwind config*/
+   /*--namespace-black: #FFF;*/
+  }
+}
 html {
   scroll-behavior: smooth;
 }

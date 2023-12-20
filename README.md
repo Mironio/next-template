@@ -1,12 +1,14 @@
-This is a nextJS template. 
+This is a Next.js template. 
 
 # Features
 
-- Everything is made on top of standard nextJS template (`npx create-next-app@latest . `) 
+- Everything is made on top of standard Next.js template `npx create-next-app@latest . ` 
 - look for 'SELECT' in the code to find places to change
 - Added `npm run generate-version` that populates version.ts with commit hash. This script can be used before deploy 
 - Added api/health endpoint that emits 200 along with the version
 - Configured husky pre-push. See .husky/pre-push to tweak it
+- added example how to extend colors
+- added `models` folder with interface example
 
 ### Build
 
@@ -17,7 +19,7 @@ This is a nextJS template.
 
 ### Eslint
 
-- default nextJS Eslint configuration is used
+- default Next.js Eslint configuration is used
 - added [tailwind eslint plugin](https://www.npmjs.com/package/eslint-plugin-tailwindcss)
 
 
@@ -34,7 +36,7 @@ bun dev
 ```
 
 
-### Next steps for Github
+### Next steps for GitHub
 
 - create a repo
 - Use `pbcopy < ~/.ssh/id_ed25519.pub` and set up keys in the following menu `profile > settings > security > ssh keys`
@@ -45,7 +47,7 @@ bun dev
 - now you can do `git push -u https://<USER>:<ACCESS_TOKEN>@github.com/<USER>/next-template.git`
 
 
-### How to run container with podman.
+### How to run container with Podman.
 
 - The steps below can be easily done by docker as well
 
