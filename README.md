@@ -4,6 +4,9 @@ This is a nextJS template.
 
 - Everything is made on top of standard nextJS template (`npx create-next-app@latest . `) 
 - look for 'SELECT' in the code to find places to change
+- Added `npm run generate-version` that populates version.ts with commit hash. This script can be used before deploy 
+- Added api/health endpoint that emits 200 along with the version
+- 
 
 ### Build
 
