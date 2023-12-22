@@ -10,6 +10,7 @@ This is a Next.js template.
 - added example how to extend colors
 - added `models` folder with interface example
 - Added Tailwind Material and Heroicons
+- Added set of favicons as an example. They were generated via https://realfavicongenerator.net/
 
 ### Build
 

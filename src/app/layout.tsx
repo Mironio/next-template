@@ -17,6 +17,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'SELECT title for browser tab',
   description: 'SELECT description. Used when share the link',
+  icons: {
+    icon: [
+      { url: '/favicons/favicon-32x32.png', sizes: '32x32' },
+      { url: '/favicons/android-chrome-192x192.png', sizes: '192x192' },
+    ],
+    apple: [
+      { url: 'favicons/apple-touch-icon.png' },
+    ],
+  },
 }
 
 export default function RootLayout({
