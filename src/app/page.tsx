@@ -1,12 +1,13 @@
 'use client';
 import { Alert } from "@material-tailwind/react";
-import { BeakerIcon } from "@heroicons/react/24/outline";
+import useGetRandomJoke from "@/app/data-fetching/jokes/useGetRandomJoke";
 
 export default function Home() {
+  const {data, isLoading} = useGetRandomJoke()
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
-      <BeakerIcon className="h-6 w-6 text-blue-500" />
-      <Alert>Text example</Alert>
+      {data && <Alert>{data.setup}</Alert>}
     </main>
-  )
+  );
 }

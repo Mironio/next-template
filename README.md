@@ -11,6 +11,9 @@ This is a Next.js template.
 - added `models` folder with interface example
 - Added Tailwind Material and Heroicons
 - Added set of favicons as an example. They were generated via https://realfavicongenerator.net/
+- added React Query with trivial GET example
+- Addes React Query Eslint
+- added dev-mock script with an ability to switch to mocked api/mock endpoints
 
 ### Build
 
