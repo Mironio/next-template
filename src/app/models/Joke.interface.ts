@@ -1,6 +1,6 @@
 export default interface Joke {
   type: string
   setup: string
-  punchLine: string
+  punchline: string
   id: number
 }
