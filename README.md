@@ -14,6 +14,7 @@ This is a Next.js template.
 - added React Query with trivial GET example
 - Addes React Query Eslint
 - added dev-mock script with an ability to switch to mocked api/mock endpoints
+- added primitive pino logger for api routes
 
 ### Build
 
