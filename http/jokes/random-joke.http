@@ -1,0 +1,2 @@
+GET {{host}}/random_joke
+Accept: application/json
