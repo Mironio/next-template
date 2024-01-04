@@ -16,6 +16,9 @@ This is a Next.js template.
 - added dev-mock script with an ability to switch to mocked api/mock endpoints
 - added primitive pino logger for api routes
 - added http GET file example with different environment support
+- added script to upload any file to any aws bucket.
+- added script to zip the app
+- todo implement https://dev.to/bnn1/deploying-dockerized-nextjs-app-to-aws-eb-part-2-deployment-to-beanstalk-47pj
 
 ### Build
 
