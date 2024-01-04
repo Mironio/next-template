@@ -10,7 +10,8 @@
     "lint": "next lint",
     "generate-version": "node scripts/generateVersion.js",
     "zip-app": "sh scripts/zip_app.sh",
-    "upload-file-to-s3": "node scripts/upload-to-s3/index.js"
+    "upload-file-to-s3": "node scripts/upload-to-s3/index.js",
+    "deploy-to-s3": "npm run build && node scripts/deploy-app-to-s3/index.js out"
   },
   "dependencies": {
     "@heroicons/react": "2.1.1",
@@ -36,6 +37,8 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "3.478.0"
+    "@aws-sdk/client-s3": "3.478.0",
+    "mime": "4.0.1",
+    "dotenv": "16.3.1"
   }
 }

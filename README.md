@@ -18,7 +18,31 @@ This is a Next.js template.
 - added http GET file example with different environment support
 - added script to upload any file to any aws bucket.
 - added script to zip the app
+- added AWS SDK script to deploy `out` folder to S3 see: _'Static Deploy to S3'_ section
 - todo implement https://dev.to/bnn1/deploying-dockerized-nextjs-app-to-aws-eb-part-2-deployment-to-beanstalk-47pj
+
+
+### Static Deploy to S3
+
+1. `next.config.js`
+- add `output: "export"` 
+- Configure images if necessary.
+```
+images: {
+  loader: 'custom',
+  loaderFile: './image-loader.js',
+  },
+```
+
+2. `image-loader.js`
+
+```javascript
+export default function myImageLoader({ src, width, quality }) {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
+```
+3. `.env`
+- Add S3 bucket name: `BUCKET_NAME=example`
 
 ### Build
 
