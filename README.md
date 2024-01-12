@@ -20,6 +20,7 @@ This is a Next.js template.
 - added script to zip the app
 - added AWS SDK script to deploy `out` folder to S3 see: _'Static Deploy to S3'_ section
 - todo implement https://dev.to/bnn1/deploying-dockerized-nextjs-app-to-aws-eb-part-2-deployment-to-beanstalk-47pj
+- added terraform files (see terraform folder) to create s3 for static website and upload the static version of the next js
 
 
 ### Static Deploy to S3
