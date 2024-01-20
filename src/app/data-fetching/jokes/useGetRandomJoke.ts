@@ -6,7 +6,7 @@ export default function useGetRandomJoke() {
   return useQuery({
     queryKey: [jokeQueryKey],
     queryFn: fetchJoke,
-    select: data => data.data,
+    select: ({data}) => data,
     retry: false,
     staleTime: 1000,
   })
