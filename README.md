@@ -6,7 +6,7 @@ This is a Next.js template.
 - look for 'SELECT' in the code to find places to change
 - Added `npm run generate-version` that populates version.ts with commit hash. This script can be used before deploy 
 - Added api/health endpoint that emits 200 along with the version
-- Configured husky pre-push. See .husky/pre-push to tweak it
+- Configured husky pre-push. See .husky/pre-push to tweak it. Sometimes `husky install` is needed to make it work
 - added example how to extend colors
 - added `models` folder with interface example
 - Added Tailwind Material and Heroicons
