@@ -1,9 +1,9 @@
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, RefObject, useCallback, useEffect, useState } from "react";
 import Fruit from "@/app/models/Fruit.interface";
 import fetchSuggestions from "@/app/components/AutoComplete/fetchSuggestions";
 
 
-export function useAutoComplete() {
+export function useAutoComplete(suggestionsRef: RefObject<HTMLElement>) {
 
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false)
@@ -12,8 +12,31 @@ export function useAutoComplete() {
   const [highlightedIndex, setHighlightedIndex] = useState(0);
 
   useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
+        setShowSuggestions(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [suggestionsRef]);
+
+  useEffect(() => {
     setHighlightedIndex(0);
   }, [suggestions]);
+
+  const resetSuggestions = useCallback(() => {
+    setSuggestions([])
+  }, [setSuggestions])
+
+  const handleApplyClick = useCallback((suggestion: Fruit) => {
+    setShowSuggestions(false)
+    setInput(suggestion.label);
+    resetSuggestions()
+  }, [resetSuggestions]);
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.key === 'ArrowDown') {
@@ -23,7 +46,7 @@ export function useAutoComplete() {
     } else if (event.key === 'Enter' && highlightedIndex >= 0) {
       handleApplyClick(suggestions[highlightedIndex])
     }
-  }, [suggestions.length, highlightedIndex]);
+  }, [suggestions, highlightedIndex, handleApplyClick]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -31,10 +54,6 @@ export function useAutoComplete() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
-
-  const resetSuggestions = useCallback(() => {
-    setSuggestions([])
-  }, [setSuggestions])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -56,11 +75,7 @@ export function useAutoComplete() {
     setInput(e.target.value);
   }, [setInput])
 
-  const handleApplyClick = useCallback((suggestion: Fruit) => {
-    setShowSuggestions(false)
-    setInput(suggestion.label);
-    resetSuggestions()
-  }, [resetSuggestions]);
+
 
 
   return {

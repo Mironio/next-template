@@ -1,12 +1,11 @@
 import { useAutoComplete } from "@/app/components/AutoComplete/useGetSuggestions";
-import Image from "next/image";
 import SearchInput from "@/app/components/SearchInput/SearchInput";
-import Spinner from "@/app/components/Spinner/Spinner";
 import Suggestions from "@/app/components/Suggestions/Suggestions";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function AutoComplete() {
 
+  const suggestionsRef = useRef(null);
   const {
     suggestions,
     handleInputChange,
@@ -14,10 +13,9 @@ export default function AutoComplete() {
     handleApplyClick,
     isLoading,
     highlightedIndex
-  } =
-    useAutoComplete()
+  } = useAutoComplete(suggestionsRef)
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center" ref={suggestionsRef}>
       <SearchInput value={input} handleInputChange={handleInputChange}/>
       <Suggestions
         highlightedIndex={highlightedIndex}

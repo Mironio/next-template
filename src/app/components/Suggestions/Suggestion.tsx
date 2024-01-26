@@ -10,7 +10,7 @@ interface SuggestionsInterface {
 export default function Suggestion({highlight, suggestion, onItemClick}: SuggestionsInterface) {
   return (
     <button
-      className={`block`}
+      className="w-full text-left"
       onClick={() => onItemClick(suggestion)}>
       <Highlight text={suggestion.label} highlight={highlight}/>
     </button>
