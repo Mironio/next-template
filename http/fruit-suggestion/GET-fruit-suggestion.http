@@ -1,0 +1,3 @@
+GET {{host}}/fruit-suggestion?i=dadcadcsdcdscsdc
+Accept: application/json
+
