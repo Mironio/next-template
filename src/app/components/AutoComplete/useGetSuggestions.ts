@@ -28,15 +28,12 @@ export function useAutoComplete(suggestionsRef: RefObject<HTMLElement>) {
     setHighlightedIndex(0);
   }, [suggestions]);
 
-  const resetSuggestions = useCallback(() => {
-    setSuggestions([])
-  }, [setSuggestions])
 
   const handleApplyClick = useCallback((suggestion: Fruit) => {
     setShowSuggestions(false)
     setInput(suggestion.label);
-    resetSuggestions()
-  }, [resetSuggestions]);
+    setSuggestions([])
+  }, []);
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.key === 'ArrowDown') {
@@ -75,12 +72,8 @@ export function useAutoComplete(suggestionsRef: RefObject<HTMLElement>) {
     setInput(e.target.value);
   }, [setInput])
 
-
-
-
   return {
     suggestions: showSuggestions ? suggestions : [],
-    resetSuggestions,
     handleInputChange,
     input,
     handleApplyClick,
